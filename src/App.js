@@ -12,7 +12,7 @@ export default function App() {
   };
 
   useEffect(() => {
-    setCities(list.filter((city) => city.includes(val)));
+    setCities(list.filter((city) => city.toLocaleLowerCase().includes(val)));
   }, [val]);
 
   return (
